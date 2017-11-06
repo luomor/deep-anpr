@@ -70,6 +70,7 @@ def extract_backgrounds(archive_name):
     for m in members():
         if not m.name.endswith(".jpg"):
             continue
+        print m.name
         f =  t.extractfile(m)
         try:
             im = im_from_file(f)
