@@ -284,10 +284,10 @@ def generate_ims():
 if __name__ == "__main__":
     os.mkdir("test")
     im_gen = itertools.islice(generate_ims(), int(sys.argv[1]))
-    print enumerate(im_gen)
+    print(enumerate(im_gen))
     for img_idx, (im, c, p) in enumerate(im_gen):
         fname = "test/{:08d}_{}_{}.png".format(img_idx, c,
                                                "1" if p else "0")
-        print fname
+        print(fname)
         cv2.imwrite(fname, im * 255.)
 
